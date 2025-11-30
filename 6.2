@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AngularJS {{ }} Example</title>
+
+  <!-- AngularJS CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+
+  <h2>Use of {{ }} in AngularJS</h2>
+
+  <!-- Displaying variable value -->
+  <p>Your Name: {{ name }}</p>
+
+  <!-- Displaying expression -->
+  <p>5 + 10 = {{ 5 + 10 }}</p>
+
+  <!-- Taking input and binding instantly -->
+  Enter Name: <input type="text" ng-model="name">
+
+  <script>
+    var app = angular.module("myApp", []);
+
+    app.controller("myCtrl", function($scope){
+      $scope.name = "Sayoni";   // default value
+    });
+  </script>
+
+</body>
+</html>
+
