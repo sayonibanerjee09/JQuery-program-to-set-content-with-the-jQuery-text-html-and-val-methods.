@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery text() and html() Callback Example</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+
+      // Using text() with callback
+      $("#btnText").click(function(){
+        $("#para1").text(function(index, oldText){
+          return "Old Text: " + oldText + " → New Text set using text() callback.";
+        });
+      });
+
+      // Using html() with callback
+      $("#btnHtml").click(function(){
+        $("#para2").html(function(index, oldHtml){
+          return oldHtml + "<br><b>New HTML added using html() callback.</b>";
+        });
+      });
+
+    });
+  </script>
+</head>
+<body>
+
+  <h3>text() and html() Callback Example</h3>
+
+  <p id="para1">This is original text.</p>
+  <button id="btnText">Change Text Using Callback</button>
+  <br><br>
+
+  <p id="para2">This is <i>original HTML</i>.</p>
+  <button id="btnHtml">Change HTML Using Callback</button>
+
+</body>
+</html>
