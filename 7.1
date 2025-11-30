@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Click Event Example</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+
+      // Handling button click event
+      $("#btn").click(function(){
+        $("#msg").text("Button was clicked!");
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+
+  <h3>jQuery Button Click Event</h3>
+
+  <button id="btn">Click Me</button>
+
+  <p id="msg">Message will appear here.</p>
+
+</body>
+</html>
