@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AngularJS ng-click Example</title>
+
+  <!-- AngularJS CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+
+  <h2>ng-click Event Example</h2>
+
+  <!-- Button to trigger event -->
+  <button ng-click="showMessage()">Click Me</button>
+
+  <!-- Display message -->
+  <p>{{ message }}</p>
+
+  <script>
+    var app = angular.module("myApp", []);
+
+    app.controller("myCtrl", function($scope){
+
+        // Initial message
+        $scope.message = "Waiting for click...";
+
+        // Function triggered by ng-click
+        $scope.showMessage = function(){
+            $scope.message = "Button clicked using ng-click!";
+        };
+
+    });
+  </script>
+
+</body>
+</html>
