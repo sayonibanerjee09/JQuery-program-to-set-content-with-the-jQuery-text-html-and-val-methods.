@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AngularJS ng-hide Example</title>
+
+  <!-- AngularJS CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+
+  <h2>ng-hide Event Example</h2>
+
+  <!-- Buttons to trigger events -->
+  <button ng-click="hideText()">Hide Text</button>
+  <button ng-click="showText()">Show Text</button>
+
+  <!-- Text that will be hidden or shown -->
+  <p ng-hide="isHidden">This text will be hidden using ng-hide.</p>
+
+  <script>
+    var app = angular.module("myApp", []);
+
+    app.controller("myCtrl", function($scope){
+
+        // Initially the text is visible
+        $scope.isHidden = false;
+
+        // Event to hide the text
+        $scope.hideText = function(){
+            $scope.isHidden = true;
+        };
+
+        // Event to show the text
+        $scope.showText = function(){
+            $scope.isHidden = false;
+        };
+    });
+  </script>
+
+</body>
+</html>
