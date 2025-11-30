@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery ID Selector Example</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+
+      $("#btn").click(function(){
+
+        // Get value using ID selector
+        var name = $("#username").val();
+
+        // Get text from paragraph using ID selector
+        var info = $("#msg").text();
+
+        alert("Name: " + name + "\nMessage: " + info);
+      });
+
+    });
+  </script>
+</head>
+<body>
+
+  <h3>Enter Your Name:</h3>
+
+  <input type="text" id="username" placeholder="Type here">
+
+  <p id="msg">This is a message text.</p>
+
+  <button id="btn">Get Values</button>
+
+</body>
+</html>
