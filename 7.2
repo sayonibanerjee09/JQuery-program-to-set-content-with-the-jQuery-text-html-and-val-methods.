@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AngularJS ng-app Example</title>
+
+  <!-- AngularJS CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body>
+
+  <!-- ng-app makes this div the owner of the AngularJS application -->
+  <div ng-app="myApp" ng-controller="myCtrl">
+
+    <h2>ng-app Directive Example</h2>
+
+    Enter Name: <input type="text" ng-model="name">
+    <p>Your Name: {{ name }}</p>
+
+  </div>
+
+  <script>
+    // Creating the AngularJS application
+    var app = angular.module("myApp", []);
+
+    // Controller inside the app
+    app.controller("myCtrl", function($scope){
+      $scope.name = "Sayoni"; // Initial value
+    });
+  </script>
+
+</body>
+</html>
