@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Mouse Events Example</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <style>
+    #box {
+      width: 300px;
+      height: 150px;
+      background: lightblue;
+      padding: 20px;
+      border: 2px solid black;
+    }
+  </style>
+
+  <script>
+    $(document).ready(function(){
+
+      // Mouseenter
+      $("#box").mouseenter(function(){
+        $("#msg").text("Mouse entered the box");
+      });
+
+      // Mouseleave
+      $("#box").mouseleave(function(){
+        $("#msg").text("Mouse left the box");
+      });
+
+      // Mousemove
+      $("#box").mousemove(function(event){
+        $("#msg").text("Mouse moving at X: " + event.pageX + " Y: " + event.pageY);
+      });
+
+      // Mouseover
+      $("#box").mouseover(function(){
+        console.log("Mouse is over the box");
+      });
+
+      // Mouseout
+      $("#box").mouseout(function(){
+        console.log("Mouse is out of the box");
+      });
+
+      // Mouseup
+      $("#box").mouseup(function(){
+        $("#msg").text("Mouse button released");
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+
+  <h2>jQuery Mouse Events Example</h2>
+
+  <div id="box">
+    Hover and move your mouse here
+  </div>
+
+  <p id="msg">Mouse event messages will appear here.</p>
+
+</body>
+</html>
