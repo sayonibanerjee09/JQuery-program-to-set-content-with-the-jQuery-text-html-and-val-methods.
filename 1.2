@@ -1,0 +1,15 @@
+// Importing express module
+const express = require('express');
+
+// Creating express application
+const app = express();
+
+// Defining a simple GET route
+app.get('/', (req, res) => {
+    res.send("Hello! Welcome to Express Server");
+});
+
+// Starting server on port 3000
+app.listen(3000, () => {
+    console.log("Server is running on port 3000");
+});
