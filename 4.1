@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Attribute Selector Example</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+
+      $("#btn").click(function(){
+
+        // Select input element using attribute selector
+        var user = $("input[name='username']").val();
+
+        // Select paragraph using attribute selector
+        var info = $("p[data-type='info']").text();
+
+        alert("Username: " + user + "\nInfo: " + info);
+      });
+
+    });
+  </script>
+</head>
+<body>
+
+  <h3>Enter Username:</h3>
+
+  <input type="text" name="username" placeholder="Type here">
+
+  <p data-type="info">This is attribute-based selected text.</p>
+
+  <button id="btn">Get Values</button>
+
+</body>
+</html>
