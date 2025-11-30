@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Element Selector Example</title>
+
+  <!-- jQuery CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+
+      // Selecting by type/element selector: input and p
+      $("button").click(function(){
+        
+        // Get value from input box using type selector
+        var name = $("input").val();
+
+        // Get paragraph text using element selector
+        var paraText = $("p").text();
+
+        // Display result
+        alert("Input Value: " + name + "\nParagraph Text: " + paraText);
+      });
+
+    });
+  </script>
+</head>
+<body>
+
+  <h3>Enter Your Name:</h3>
+  <input type="text" placeholder="Type here">
+
+  <p>This is a sample paragraph</p>
+
+  <button>Get Values</button>
+
+</body>
+</html>
